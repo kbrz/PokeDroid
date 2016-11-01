@@ -1,10 +1,11 @@
 package net.kbrz.pokedroid.services;
 
 
-import net.kbrz.pokedroid.models.lists.ApiResourceList;
 import net.kbrz.pokedroid.models.contests.ContestEffect;
 import net.kbrz.pokedroid.models.contests.ContestType;
 import net.kbrz.pokedroid.models.contests.SuperContestEffect;
+import net.kbrz.pokedroid.models.lists.ApiResourceList;
+import net.kbrz.pokedroid.models.lists.NamedApiResourceList;
 
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -18,7 +19,7 @@ import rx.Observable;
 public interface Contests {
 
     @GET("contest-type/")
-    Observable<ApiResourceList> getContestTypes(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getContestTypes(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("contest-type/{id}")
     Observable<ContestType> getContestType(@Path("id") int id);

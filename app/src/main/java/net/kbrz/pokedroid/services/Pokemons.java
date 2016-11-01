@@ -1,6 +1,7 @@
 package net.kbrz.pokedroid.services;
 
 import net.kbrz.pokedroid.models.lists.ApiResourceList;
+import net.kbrz.pokedroid.models.lists.NamedApiResourceList;
 import net.kbrz.pokedroid.models.pokemon.Ability;
 import net.kbrz.pokedroid.models.pokemon.Characteristic;
 import net.kbrz.pokedroid.models.pokemon.EggGroup;
@@ -29,7 +30,7 @@ import rx.Observable;
 public interface Pokemons {
 
     @GET("ability/")
-    Observable<ApiResourceList> getAbilities(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getAbilities(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("ability/{id}")
     Observable<Ability> getAbility(@Path("id") int id);
@@ -44,7 +45,7 @@ public interface Pokemons {
     Observable<Characteristic> getCharacteristic(@Path("id") int id);
 
     @GET("egg-group/")
-    Observable<ApiResourceList> getEggGroups(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getEggGroups(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("egg-group/{id}")
     Observable<EggGroup> getEggGroup(@Path("id") int id);
@@ -53,7 +54,7 @@ public interface Pokemons {
     Observable<EggGroup> getEggGroup(@Path("name") String name);
 
     @GET("gender/")
-    Observable<ApiResourceList> getGenders(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getGenders(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("gender/{id}")
     Observable<Gender> getGender(@Path("id") int id);
@@ -62,7 +63,7 @@ public interface Pokemons {
     Observable<Gender> getGender(@Path("name") String name);
 
     @GET("growth-rate/")
-    Observable<ApiResourceList> getGrowthRates(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getGrowthRates(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("growth-rate/{id}")
     Observable<GrowthRate> getGrowthRate(@Path("id") int id);
@@ -71,7 +72,7 @@ public interface Pokemons {
     Observable<GrowthRate> getGrowthRate(@Path("name") String name);
 
     @GET("nature/")
-    Observable<ApiResourceList> getNatures(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getNatures(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("nature/{id}")
     Observable<Nature> getNature(@Path("id") int id);
@@ -80,7 +81,7 @@ public interface Pokemons {
     Observable<Nature> getNature(@Path("name") String name);
 
     @GET("pokeathlon-stat/")
-    Observable<ApiResourceList> getPokeathlonStats(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getPokeathlonStats(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("pokeathlon-stat/{id}")
     Observable<PokeathlonStat> getPokeathlonStat(@Path("id") int id);
@@ -89,7 +90,7 @@ public interface Pokemons {
     Observable<PokeathlonStat> getPokeathlonStat(@Path("name") String name);
 
     @GET("pokemon/")
-    Observable<ApiResourceList> getPokemons(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getPokemons(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("pokemon/{id}")
     Observable<Pokemon> getPokemon(@Path("id") int id);
@@ -98,7 +99,7 @@ public interface Pokemons {
     Observable<Pokemon> getPokemon(@Path("name") String name);
 
     @GET("pokemon-color/")
-    Observable<ApiResourceList> getPokemonColors(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getPokemonColors(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("pokemon-color/{id}")
     Observable<PokemonColor> getPokemonColor(@Path("id") int id);
@@ -107,7 +108,7 @@ public interface Pokemons {
     Observable<PokemonColor> getPokemonColor(@Path("name") String name);
 
     @GET("pokemon-form/")
-    Observable<ApiResourceList> getPokemonForms(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getPokemonForms(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("pokemon-form/{id}")
     Observable<PokemonForm> getPokemonForm(@Path("id") int id);
@@ -116,7 +117,7 @@ public interface Pokemons {
     Observable<PokemonForm> getPokemonForm(@Path("name") String name);
 
     @GET("pokemon-habitat/")
-    Observable<ApiResourceList> getPokemonHabitats(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getPokemonHabitats(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("pokemon-habitat/{id}")
     Observable<PokemonHabitat> getPokemonHabitat(@Path("id") int id);
@@ -125,7 +126,7 @@ public interface Pokemons {
     Observable<PokemonHabitat> getPokemonHabitat(@Path("name") String name);
 
     @GET("pokemon-shape/")
-    Observable<ApiResourceList> getPokemonShapes(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getPokemonShapes(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("pokemon-shape/{id}")
     Observable<PokemonShape> getPokemonShape(@Path("id") int id);
@@ -134,7 +135,7 @@ public interface Pokemons {
     Observable<PokemonShape> getPokemonShape(@Path("name") String name);
 
     @GET("pokemon-species/")
-    Observable<ApiResourceList> getPokemonSpecieses(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getPokemonSpecieses(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("pokemon-species/{id}")
     Observable<PokemonSpecies> getPokemonSpecies(@Path("id") int id);
@@ -143,7 +144,7 @@ public interface Pokemons {
     Observable<PokemonSpecies> getPokemonSpecies(@Path("name") String name);
 
     @GET("stat/")
-    Observable<ApiResourceList> getStats(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getStats(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("stat/{id}")
     Observable<Stat> getStat(@Path("id") int id);
@@ -152,7 +153,7 @@ public interface Pokemons {
     Observable<Stat> getStat(@Path("name") String name);
 
     @GET("type/")
-    Observable<ApiResourceList> getTypes(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getTypes(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("type/{id}")
     Observable<Type> getType(@Path("id") int id);

@@ -1,6 +1,6 @@
 package net.kbrz.pokedroid.services;
 
-import net.kbrz.pokedroid.models.lists.ApiResourceList;
+import net.kbrz.pokedroid.models.lists.NamedApiResourceList;
 import net.kbrz.pokedroid.models.utility.Language;
 
 import retrofit2.http.GET;
@@ -15,7 +15,7 @@ import rx.Observable;
 public interface Utility {
 
     @GET("language/")
-    Observable<ApiResourceList> getLanguages(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getLanguages(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("language/{id}")
     Observable<Language> getLanguage(@Path("id") int id);

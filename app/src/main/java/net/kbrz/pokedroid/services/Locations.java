@@ -1,6 +1,7 @@
 package net.kbrz.pokedroid.services;
 
 import net.kbrz.pokedroid.models.lists.ApiResourceList;
+import net.kbrz.pokedroid.models.lists.NamedApiResourceList;
 import net.kbrz.pokedroid.models.locations.Location;
 import net.kbrz.pokedroid.models.locations.LocationArea;
 import net.kbrz.pokedroid.models.locations.PalParkArea;
@@ -30,7 +31,7 @@ public interface Locations {
     Observable<LocationArea> getLocationArea(@Path("id") int id);
 
     @GET("pal-park-area/")
-    Observable<ApiResourceList> getPalParkAreas(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getPalParkAreas(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("pal-park-area/{id}")
     Observable<PalParkArea> getPalParkArea(@Path("id") int id);
@@ -39,7 +40,7 @@ public interface Locations {
     Observable<PalParkArea> getPalParkArea(@Path("name") String name);
 
     @GET("region/")
-    Observable<ApiResourceList> getRegions(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getRegions(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("region/{id}")
     Observable<Region> getRegion(@Path("id") int id);
