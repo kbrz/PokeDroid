@@ -1,6 +1,6 @@
 package net.kbrz.pokedroid.services;
 
-import net.kbrz.pokedroid.models.APIResourceList;
+import net.kbrz.pokedroid.models.lists.NamedApiResourceList;
 import net.kbrz.pokedroid.models.moves.Move;
 import net.kbrz.pokedroid.models.moves.MoveAilment;
 import net.kbrz.pokedroid.models.moves.MoveBattleStyle;
@@ -21,7 +21,7 @@ import rx.Observable;
 public interface Moves {
 
     @GET("move/")
-    Observable<APIResourceList> getMoves(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getMoves(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move/{id}")
     Observable<Move> getMove(@Path("id") int id);
@@ -30,7 +30,7 @@ public interface Moves {
     Observable<Move> getMove(@Path("name") String name);
 
     @GET("move-ailment/")
-    Observable<APIResourceList> getMoveAilments(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getMoveAilments(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-ailment/{id}")
     Observable<MoveAilment> getMoveAilment(@Path("id") int id);
@@ -39,7 +39,7 @@ public interface Moves {
     Observable<MoveAilment> getMoveAilment(@Path("name") String name);
 
     @GET("move-battle-style/")
-    Observable<APIResourceList> getMoveBattleStyles(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getMoveBattleStyles(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-battle-style/{id}")
     Observable<MoveBattleStyle> getMoveBattleStyle(@Path("id") int id);
@@ -48,7 +48,7 @@ public interface Moves {
     Observable<MoveBattleStyle> getMoveBattleStyle(@Path("name") String name);
 
     @GET("move-category/")
-    Observable<APIResourceList> getMoveCategories(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getMoveCategories(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-category/{id}")
     Observable<MoveCategory> getMoveCategory(@Path("id") int id);
@@ -57,7 +57,7 @@ public interface Moves {
     Observable<MoveCategory> getMoveCategory(@Path("name") String name);
 
     @GET("move-damage-class/")
-    Observable<APIResourceList> getMoveDamageClasses(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getMoveDamageClasses(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-damage-class/{id}")
     Observable<MoveDamageClass> getMoveDamageClass(@Path("id") int id);
@@ -66,7 +66,7 @@ public interface Moves {
     Observable<MoveDamageClass> getMoveDamageClass(@Path("name") String name);
 
     @GET("move-learn-method/")
-    Observable<APIResourceList> getMoveLearnMethods(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getMoveLearnMethods(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-learn-method/{id}")
     Observable<MoveLearnMethod> getMoveLearnMethod(@Path("id") int id);
@@ -75,7 +75,7 @@ public interface Moves {
     Observable<MoveLearnMethod> getMoveLearnMethod(@Path("name") String name);
 
     @GET("move-target/")
-    Observable<APIResourceList> getMoveTargets(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getMoveTargets(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-target/{id}")
     Observable<MoveTarget> getMoveTarget(@Path("id") int id);
