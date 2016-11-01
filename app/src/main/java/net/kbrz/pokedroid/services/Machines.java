@@ -20,7 +20,4 @@ public interface Machines {
     @GET("machine/{id}")
     Observable<Machine> getMachine(@Path("id") int id);
 
-    @GET("machine/{name}")
-    Observable<Machine> getMachine(@Path("name") String name);
-
 }

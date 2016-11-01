@@ -32,6 +32,9 @@ public interface Contests {
     @GET("contest-effect/{id}")
     Observable<ContestEffect> getContestEffect(@Path("id") int id);
 
+    @GET("super-contest-effect/")
+    Observable<APIResourceList> getSuperContestEffects(@Query("limit") Integer limit, @Query("offset") Integer offset);
+
     @GET("super-contest-effect/{id}")
     Observable<SuperContestEffect> getSuperContestEffect(@Path("id") int id);
 

@@ -23,17 +23,11 @@ public interface Locations {
     @GET("location/{id}")
     Observable<Location> getLocation(@Path("id") int id);
 
-    @GET("location/{name}")
-    Observable<Location> getLocation(@Path("name") String name);
-
     @GET("location-area/")
     Observable<APIResourceList> getLocationAreas(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("location-area/{id}")
     Observable<LocationArea> getLocationArea(@Path("id") int id);
-
-    @GET("location-area/{name}")
-    Observable<LocationArea> getLocationArea(@Path("name") String name);
 
     @GET("pal-park-area/")
     Observable<APIResourceList> getPalParkAreas(@Query("limit") Integer limit, @Query("offset") Integer offset);
