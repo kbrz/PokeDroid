@@ -1,5 +1,4 @@
-.idea/libraries
-keDroid
+# PokeDroid
 An Android library for v2 of pokeapi.co to use with RxJava.
 
 ### Installation
