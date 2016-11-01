@@ -1,6 +1,19 @@
-package net.kbrz.pokedroid.services;
+package net.kbrz.pokedroid;
+
+import net.kbrz.pokedroid.services.Berries;
+import net.kbrz.pokedroid.services.Contests;
+import net.kbrz.pokedroid.services.Encounters;
+import net.kbrz.pokedroid.services.Evolution;
+import net.kbrz.pokedroid.services.Games;
+import net.kbrz.pokedroid.services.Items;
+import net.kbrz.pokedroid.services.Locations;
+import net.kbrz.pokedroid.services.Machines;
+import net.kbrz.pokedroid.services.Moves;
+import net.kbrz.pokedroid.services.Pokemons;
+import net.kbrz.pokedroid.services.Utility;
 
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -26,6 +39,7 @@ public class PokeDroid {
         retrofit = new Retrofit.Builder()
                 .baseUrl("http://pokeapi.co/api/v2/")
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
     }
 
