@@ -8,6 +8,7 @@ import net.kbrz.pokedroid.models.PokeDroidModel;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class FlavorText extends PokeDroidModel {
 
     @SerializedName("flavor_text")

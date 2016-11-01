@@ -9,6 +9,7 @@ import net.kbrz.pokedroid.models.commons.NamedApiResource;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class AbilityFlavorText extends PokeDroidModel {
 
     @SerializedName("flavor_text")

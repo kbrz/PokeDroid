@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class NamedApiResource extends ApiResource {
 
     @SerializedName("name")

@@ -11,6 +11,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class TypeRelations extends PokeDroidModel {
 
     @SerializedName("no_damage_to")
@@ -18,7 +19,7 @@ public class TypeRelations extends PokeDroidModel {
     @SerializedName("half_damage_to")
     private List<NamedApiResource> halfDamageTo;
     @SerializedName("double_damage_to")
-    private List<NamedApiResource> doubleTamageTo;
+    private List<NamedApiResource> doubleDamageTo;
     @SerializedName("no_damage_from")
     private List<NamedApiResource> noDamageFrom;
     @SerializedName("half_damage_from")
@@ -42,12 +43,12 @@ public class TypeRelations extends PokeDroidModel {
         this.halfDamageTo = halfDamageTo;
     }
 
-    public List<NamedApiResource> getDoubleTamageTo() {
-        return doubleTamageTo;
+    public List<NamedApiResource> getDoubleDamageTo() {
+        return doubleDamageTo;
     }
 
-    public void setDoubleTamageTo(List<NamedApiResource> doubleTamageTo) {
-        this.doubleTamageTo = doubleTamageTo;
+    public void setDoubleDamageTo(List<NamedApiResource> doubleDamageTo) {
+        this.doubleDamageTo = doubleDamageTo;
     }
 
     public List<NamedApiResource> getNoDamageFrom() {

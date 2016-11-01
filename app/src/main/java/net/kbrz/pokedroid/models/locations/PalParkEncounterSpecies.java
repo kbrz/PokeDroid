@@ -8,6 +8,7 @@ import net.kbrz.pokedroid.models.commons.NamedApiResource;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class PalParkEncounterSpecies extends PokemonEncounter {
 
     @SerializedName("base_score")

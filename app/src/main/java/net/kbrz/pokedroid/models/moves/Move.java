@@ -16,6 +16,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class Move extends PokeDroidModel {
 
     @SerializedName("id")

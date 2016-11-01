@@ -1,8 +1,9 @@
-package net.kbrz.pokedroid.models;
+package net.kbrz.pokedroid.models.lists;
 
 import com.google.gson.annotations.SerializedName;
 
-import net.kbrz.pokedroid.models.commons.ApiResource;
+import net.kbrz.pokedroid.models.PokeDroidModel;
+import net.kbrz.pokedroid.models.commons.NamedApiResource;
 
 import java.util.List;
 
@@ -10,7 +11,8 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
-public class APIResourceList extends PokeDroidModel {
+@SuppressWarnings("unused")
+public class NamedApiResourceList extends PokeDroidModel {
 
     @SerializedName("count")
     private Integer count;
@@ -19,7 +21,7 @@ public class APIResourceList extends PokeDroidModel {
     @SerializedName("previous")
     private String previous;
     @SerializedName("results")
-    private List<ApiResource> results;
+    private List<NamedApiResource> results;
 
     public Integer getCount() {
         return count;
@@ -45,11 +47,11 @@ public class APIResourceList extends PokeDroidModel {
         this.previous = previous;
     }
 
-    public List<ApiResource> getResults() {
+    public List<NamedApiResource> getResults() {
         return results;
     }
 
-    public void setResults(List<ApiResource> results) {
+    public void setResults(List<NamedApiResource> results) {
         this.results = results;
     }
 }

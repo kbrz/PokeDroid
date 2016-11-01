@@ -8,6 +8,7 @@ import net.kbrz.pokedroid.models.PokeDroidModel;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class VerboseEffect extends PokeDroidModel {
 
     @SerializedName("effect")

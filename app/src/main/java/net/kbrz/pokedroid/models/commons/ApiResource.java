@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class ApiResource extends PokeDroidModel {
 
     @SerializedName("url")

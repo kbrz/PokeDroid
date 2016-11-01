@@ -20,9 +20,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class PokeDroid {
 
-    private  Retrofit retrofit;
+    private final Retrofit retrofit;
     private Berries berriesService;
     private Contests contestsService;
     private Encounters encountersService;
