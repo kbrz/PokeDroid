@@ -13,6 +13,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class Location extends PokeDroidModel {
 
     @SerializedName("id")

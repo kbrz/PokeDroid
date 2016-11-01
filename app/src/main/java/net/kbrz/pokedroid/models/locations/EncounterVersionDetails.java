@@ -9,6 +9,7 @@ import net.kbrz.pokedroid.models.commons.NamedApiResource;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class EncounterVersionDetails extends PokeDroidModel {
 
     @SerializedName("rate")

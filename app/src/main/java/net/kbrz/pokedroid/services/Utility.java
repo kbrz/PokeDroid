@@ -11,7 +11,7 @@ import rx.Observable;
 /**
  * @author Konrad Brzykcy.
  */
-
+@SuppressWarnings("unused")
 public interface Utility {
 
     @GET("language/")

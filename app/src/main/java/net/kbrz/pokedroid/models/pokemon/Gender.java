@@ -11,6 +11,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class Gender extends PokeDroidModel {
 
     @SerializedName("id")

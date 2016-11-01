@@ -11,6 +11,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class Berry extends PokeDroidModel {
 
     @SerializedName("id")

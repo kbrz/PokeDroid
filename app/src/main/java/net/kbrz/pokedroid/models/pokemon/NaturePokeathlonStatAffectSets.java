@@ -10,6 +10,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class NaturePokeathlonStatAffectSets extends PokeDroidModel {
 
     @SerializedName("increase")

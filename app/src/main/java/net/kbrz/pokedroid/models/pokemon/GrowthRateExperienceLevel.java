@@ -8,6 +8,7 @@ import net.kbrz.pokedroid.models.PokeDroidModel;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class GrowthRateExperienceLevel extends PokeDroidModel {
 
     @SerializedName("level")

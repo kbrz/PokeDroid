@@ -9,6 +9,7 @@ import net.kbrz.pokedroid.models.commons.NamedApiResource;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class PokemonStat extends PokeDroidModel {
 
     @SerializedName("stat")

@@ -13,6 +13,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class MoveDamageClass extends PokeDroidModel {
 
     @SerializedName("id")

@@ -18,6 +18,7 @@ import rx.Observable;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public interface Moves {
 
     @GET("move/")

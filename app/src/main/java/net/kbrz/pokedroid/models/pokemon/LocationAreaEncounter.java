@@ -12,6 +12,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class LocationAreaEncounter extends PokeDroidModel {
 
     @SerializedName("location_area")

@@ -8,6 +8,7 @@ import net.kbrz.pokedroid.models.PokeDroidModel;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class ItemSprites extends PokeDroidModel {
 
     @SerializedName("default")

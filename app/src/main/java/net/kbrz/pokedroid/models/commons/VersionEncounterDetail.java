@@ -10,6 +10,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class VersionEncounterDetail extends PokeDroidModel {
 
     @SerializedName("version")

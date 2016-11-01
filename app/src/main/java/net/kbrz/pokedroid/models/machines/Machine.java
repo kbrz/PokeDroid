@@ -9,6 +9,7 @@ import net.kbrz.pokedroid.models.commons.NamedApiResource;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public class Machine extends PokeDroidModel {
 
     @SerializedName("id")

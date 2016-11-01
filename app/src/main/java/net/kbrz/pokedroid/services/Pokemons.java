@@ -27,6 +27,7 @@ import rx.Observable;
  * @author Konrad Brzykcy.
  */
 
+@SuppressWarnings("unused")
 public interface Pokemons {
 
     @GET("ability/")
@@ -135,7 +136,7 @@ public interface Pokemons {
     Observable<PokemonShape> getPokemonShape(@Path("name") String name);
 
     @GET("pokemon-species/")
-    Observable<NamedApiResourceList> getPokemonSpecieses(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Observable<NamedApiResourceList> getPokemonSpecies(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("pokemon-species/{id}")
     Observable<PokemonSpecies> getPokemonSpecies(@Path("id") int id);
