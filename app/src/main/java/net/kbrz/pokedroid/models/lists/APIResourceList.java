@@ -1,7 +1,8 @@
-package net.kbrz.pokedroid.models;
+package net.kbrz.pokedroid.models.lists;
 
 import com.google.gson.annotations.SerializedName;
 
+import net.kbrz.pokedroid.models.PokeDroidModel;
 import net.kbrz.pokedroid.models.commons.ApiResource;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  * @author Konrad Brzykcy.
  */
 
-public class APIResourceList extends PokeDroidModel {
+public class ApiResourceList extends PokeDroidModel {
 
     @SerializedName("count")
     private Integer count;
