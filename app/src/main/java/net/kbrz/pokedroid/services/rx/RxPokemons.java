@@ -1,4 +1,4 @@
-package net.kbrz.pokedroid.services;
+package net.kbrz.pokedroid.services.rx;
 
 import net.kbrz.pokedroid.models.lists.ApiResourceList;
 import net.kbrz.pokedroid.models.lists.NamedApiResourceList;
@@ -28,7 +28,7 @@ import rx.Observable;
  */
 
 @SuppressWarnings("unused")
-public interface Pokemons {
+public interface RxPokemons {
 
     @GET("ability/")
     Observable<NamedApiResourceList> getAbilities(@Query("limit") Integer limit, @Query("offset") Integer offset);

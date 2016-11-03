@@ -1,4 +1,4 @@
-package net.kbrz.pokedroid.services;
+package net.kbrz.pokedroid.services.rx;
 
 import net.kbrz.pokedroid.models.evolution.EvolutionChain;
 import net.kbrz.pokedroid.models.evolution.EvolutionTrigger;
@@ -15,7 +15,7 @@ import rx.Observable;
  */
 
 @SuppressWarnings("unused")
-public interface Evolution {
+public interface RxEvolution {
 
     @GET("evolution-chain/")
     Observable<ApiResourceList> getEvolutionChains(@Query("limit") Integer limit, @Query("offset") Integer offset);

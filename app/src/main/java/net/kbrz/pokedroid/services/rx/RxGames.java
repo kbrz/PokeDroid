@@ -1,4 +1,4 @@
-package net.kbrz.pokedroid.services;
+package net.kbrz.pokedroid.services.rx;
 
 import net.kbrz.pokedroid.models.games.Generation;
 import net.kbrz.pokedroid.models.games.Pokedex;
@@ -16,7 +16,7 @@ import rx.Observable;
  */
 
 @SuppressWarnings("unused")
-public interface Games {
+public interface RxGames {
 
     @GET("generation/")
     Observable<NamedApiResourceList> getGenerations(@Query("limit") Integer limit, @Query("offset") Integer offset);

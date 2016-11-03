@@ -1,4 +1,4 @@
-package net.kbrz.pokedroid.services;
+package net.kbrz.pokedroid.services.rx;
 
 import net.kbrz.pokedroid.models.encounters.EncounterCondition;
 import net.kbrz.pokedroid.models.encounters.EncounterConditionValue;
@@ -15,7 +15,7 @@ import rx.Observable;
  */
 
 @SuppressWarnings("unused")
-public interface Encounters {
+public interface RxEncounters {
 
     @GET("encounter-method/")
     Observable<NamedApiResourceList> getEncounterMethods(@Query("limit") Integer limit, @Query("offset") Integer offset);

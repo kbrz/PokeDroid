@@ -1,4 +1,4 @@
-package net.kbrz.pokedroid.services;
+package net.kbrz.pokedroid.services.rx;
 
 
 import net.kbrz.pokedroid.models.contests.ContestEffect;
@@ -17,7 +17,7 @@ import rx.Observable;
  */
 
 @SuppressWarnings("unused")
-public interface Contests {
+public interface RxContests {
 
     @GET("contest-type/")
     Observable<NamedApiResourceList> getContestTypes(@Query("limit") Integer limit, @Query("offset") Integer offset);

@@ -1,4 +1,4 @@
-package net.kbrz.pokedroid.services;
+package net.kbrz.pokedroid.services.rx;
 
 import net.kbrz.pokedroid.models.berries.Berry;
 import net.kbrz.pokedroid.models.berries.BerryFirmness;
@@ -15,7 +15,7 @@ import rx.Observable;
  */
 
 @SuppressWarnings("unused")
-public interface Berries {
+public interface RxBerries {
 
     @GET("berry/")
     Observable<NamedApiResourceList> getBerries(@Query("limit") Integer limit, @Query("offset") Integer offset);

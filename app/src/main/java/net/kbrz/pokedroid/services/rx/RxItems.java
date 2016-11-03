@@ -1,4 +1,4 @@
-package net.kbrz.pokedroid.services;
+package net.kbrz.pokedroid.services.rx;
 
 import net.kbrz.pokedroid.models.items.Item;
 import net.kbrz.pokedroid.models.items.ItemAttribute;
@@ -17,7 +17,7 @@ import rx.Observable;
  */
 
 @SuppressWarnings("unused")
-public interface Items {
+public interface RxItems {
 
     @GET("item/")
     Observable<NamedApiResourceList> getItems(@Query("limit") Integer limit, @Query("offset") Integer offset);
