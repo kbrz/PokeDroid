@@ -1,4 +1,6 @@
 # PokeDroid
+[![JitPack](https://jitpack.io/v/kbrz/PokeDroid.svg)](https://jitpack.io/#kbrz/PokeDroid)
+
 An Android library for v2 of pokeapi.co. Works with RxJava.
 
 ### Installation
