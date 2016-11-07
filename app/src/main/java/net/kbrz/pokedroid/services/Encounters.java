@@ -5,10 +5,10 @@ import net.kbrz.pokedroid.models.encounters.EncounterConditionValue;
 import net.kbrz.pokedroid.models.encounters.EncounterMethod;
 import net.kbrz.pokedroid.models.lists.NamedApiResourceList;
 
+import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
-import rx.Observable;
 
 /**
  * @author Konrad Brzykcy.
@@ -18,30 +18,30 @@ import rx.Observable;
 public interface Encounters {
 
     @GET("encounter-method/")
-    Observable<NamedApiResourceList> getEncounterMethods(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getEncounterMethods(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("encounter-method/{id}")
-    Observable<EncounterMethod> getEncounterMethod(@Path("id") int id);
+    Call<EncounterMethod> getEncounterMethod(@Path("id") int id);
 
     @GET("encounter-method/{name}")
-    Observable<EncounterMethod> getEncounterMethod(@Path("name") String name);
+    Call<EncounterMethod> getEncounterMethod(@Path("name") String name);
 
     @GET("encounter-condition/")
-    Observable<NamedApiResourceList> getEncounterConditions(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getEncounterConditions(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("encounter-condition/{id}")
-    Observable<EncounterCondition> getEncounterCondition(@Path("id") int id);
+    Call<EncounterCondition> getEncounterCondition(@Path("id") int id);
 
     @GET("encounter-condition/{name}")
-    Observable<EncounterCondition> getEncounterCondition(@Path("name") String name);
+    Call<EncounterCondition> getEncounterCondition(@Path("name") String name);
 
     @GET("encounter-condition-value/")
-    Observable<NamedApiResourceList> getEncounterConditionValues(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getEncounterConditionValues(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("encounter-condition-value/{id}")
-    Observable<EncounterConditionValue> getEncounterConditionValue(@Path("id") int id);
+    Call<EncounterConditionValue> getEncounterConditionValue(@Path("id") int id);
 
     @GET("encounter-condition-value/{name}")
-    Observable<EncounterConditionValue> getEncounterConditionValue(@Path("name") String name);
+    Call<EncounterConditionValue> getEncounterConditionValue(@Path("name") String name);
 
 }
