@@ -1,5 +1,5 @@
 # PokeDroid
-An Android library for v2 of pokeapi.co to use with RxJava.
+An Android library for v2 of pokeapi.co. Works with RxJava.
 
 ### Installation
 This library can be added to your project with Gradle build system. To achieve that you have to add these lines to your project `build.gradle` file.
@@ -20,30 +20,36 @@ dependencies {
 List of tags and also the most recent one can be found in the [releases](https://github.com/kbrz/PokeDroid/releases) tab.
 
 ### Example usage
-Examples below use
-[RxAndroid](https://github.com/ReactiveX/RxAndroid) 
-and 
-[RetroLambda](https://github.com/orfjackal/retrolambda).
 
 Fetching list of berry flavors:
 ```java
 pokeDroid = new PokeDroid();
-pokeDroid.getBerriesService().getBerryFlavors(100, 0)
-        .subscribeOn(Schedulers.io())
-        .observeOn(AndroidSchedulers.mainThread())
-        .flatMap((APIResourceList apiResourceList) -> Observable.from(apiResourceList.getResults()))
-        .subscribe((ApiResource apiResource) -> Log.d(TAG, apiResource.getUrl()));
+pokeDroid.getBerriesService().getBerryFlavors(100, 0).enqueue(new Callback<NamedApiResourceList>() {
+    @Override
+    public void onResponse(Call<NamedApiResourceList> call, Response<NamedApiResourceList> response) {
+        if (response.isSuccessful()) {
+            for (NamedApiResource namedApiResource: response.body().getResults()) {
+                Log.d(TAG, namedApiResource.getUrl());
+            }
+        }
+    }
+
+    @Override
+    public void onFailure(Call<NamedApiResourceList> call, Throwable t) {
+        t.printStackTrace();
+    }
+});
 ```
 
-An example below fetches first 60 pokemons and logs their names.
+An example below uses RxJava to fetch first 60 pokemons and log their names.
 ```java
 pokeDroid = new PokeDroid();
-pokeDroid.getPokemonsService().getPokemons(60, 0)
+pokeDroid.getRx().getPokemonsService().getPokemons(60, 0)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
-        .flatMap((APIResourceList apiResourceList) -> Observable.from(apiResourceList.getResults()))
-        .concatMap((ApiResource apiResource) -> 
-                pokeDroid.getPokemonsService().getPokemon(apiResource.getId())
+        .flatMap((NamedApiResourceList namedApiResourceList) -> Observable.from(namedApiResourceList.getResults()))
+        .concatMap((NamedApiResource namedApiResource) -> 
+                pokeDroid.getPokemonsService().getPokemon(namedApiResource.getId())
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread()))
         .subscribe((Pokemon pokemon) -> Log.d(TAG, pokemon.getName()));
