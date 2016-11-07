@@ -9,10 +9,10 @@ import net.kbrz.pokedroid.models.moves.MoveDamageClass;
 import net.kbrz.pokedroid.models.moves.MoveLearnMethod;
 import net.kbrz.pokedroid.models.moves.MoveTarget;
 
+import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
-import rx.Observable;
 
 /**
  * @author Konrad Brzykcy.
@@ -22,66 +22,66 @@ import rx.Observable;
 public interface Moves {
 
     @GET("move/")
-    Observable<NamedApiResourceList> getMoves(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getMoves(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move/{id}")
-    Observable<Move> getMove(@Path("id") int id);
+    Call<Move> getMove(@Path("id") int id);
 
     @GET("move/{name}")
-    Observable<Move> getMove(@Path("name") String name);
+    Call<Move> getMove(@Path("name") String name);
 
     @GET("move-ailment/")
-    Observable<NamedApiResourceList> getMoveAilments(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getMoveAilments(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-ailment/{id}")
-    Observable<MoveAilment> getMoveAilment(@Path("id") int id);
+    Call<MoveAilment> getMoveAilment(@Path("id") int id);
 
     @GET("move-ailment/{name}")
-    Observable<MoveAilment> getMoveAilment(@Path("name") String name);
+    Call<MoveAilment> getMoveAilment(@Path("name") String name);
 
     @GET("move-battle-style/")
-    Observable<NamedApiResourceList> getMoveBattleStyles(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getMoveBattleStyles(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-battle-style/{id}")
-    Observable<MoveBattleStyle> getMoveBattleStyle(@Path("id") int id);
+    Call<MoveBattleStyle> getMoveBattleStyle(@Path("id") int id);
 
     @GET("move-battle-style/{name}")
-    Observable<MoveBattleStyle> getMoveBattleStyle(@Path("name") String name);
+    Call<MoveBattleStyle> getMoveBattleStyle(@Path("name") String name);
 
     @GET("move-category/")
-    Observable<NamedApiResourceList> getMoveCategories(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getMoveCategories(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-category/{id}")
-    Observable<MoveCategory> getMoveCategory(@Path("id") int id);
+    Call<MoveCategory> getMoveCategory(@Path("id") int id);
 
     @GET("move-category/{name}")
-    Observable<MoveCategory> getMoveCategory(@Path("name") String name);
+    Call<MoveCategory> getMoveCategory(@Path("name") String name);
 
     @GET("move-damage-class/")
-    Observable<NamedApiResourceList> getMoveDamageClasses(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getMoveDamageClasses(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-damage-class/{id}")
-    Observable<MoveDamageClass> getMoveDamageClass(@Path("id") int id);
+    Call<MoveDamageClass> getMoveDamageClass(@Path("id") int id);
 
     @GET("move-damage-class/{name}")
-    Observable<MoveDamageClass> getMoveDamageClass(@Path("name") String name);
+    Call<MoveDamageClass> getMoveDamageClass(@Path("name") String name);
 
     @GET("move-learn-method/")
-    Observable<NamedApiResourceList> getMoveLearnMethods(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getMoveLearnMethods(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-learn-method/{id}")
-    Observable<MoveLearnMethod> getMoveLearnMethod(@Path("id") int id);
+    Call<MoveLearnMethod> getMoveLearnMethod(@Path("id") int id);
 
     @GET("move-learn-method/{name}")
-    Observable<MoveLearnMethod> getMoveLearnMethod(@Path("name") String name);
+    Call<MoveLearnMethod> getMoveLearnMethod(@Path("name") String name);
 
     @GET("move-target/")
-    Observable<NamedApiResourceList> getMoveTargets(@Query("limit") Integer limit, @Query("offset") Integer offset);
+    Call<NamedApiResourceList> getMoveTargets(@Query("limit") Integer limit, @Query("offset") Integer offset);
 
     @GET("move-target/{id}")
-    Observable<MoveTarget> getMoveTarget(@Path("id") int id);
+    Call<MoveTarget> getMoveTarget(@Path("id") int id);
 
     @GET("move-target/{name}")
-    Observable<MoveTarget> getMoveTarget(@Path("name") String name);
+    Call<MoveTarget> getMoveTarget(@Path("name") String name);
 
 }
